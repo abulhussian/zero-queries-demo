@@ -48,7 +48,7 @@ const Hero: React.FC<Props> = ({ onCta, t, lang }) => {
             {lang === 'en' ? 'Conversational Data Intelligence' : 'ذكاء البيانات المحادثي'}
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-[1.1] mb-10">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter leading-[1.1] mb-10">
             {t.headline.split(' ').map((word: string, i: number) => (
               word.toLowerCase() === 'ai' || word === 'ذكاء' ? <span key={i} className="premium-gradient">{word} </span> : word + ' '
             ))}

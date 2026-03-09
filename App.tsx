@@ -83,15 +83,15 @@ const App: React.FC = () => {
           <Features t={t.features} lang={lang} />
         </section>
 
-        <Integrations t={t.integrations} lang={lang} />
+        {/* <Integrations t={t.integrations} lang={lang} /> */}
         
         <section id="security">
           <Security t={t.security} lang={lang} />
         </section>
 
-        <Governance t={t.governance} lang={lang} />
+        {/* <Governance t={t.governance} lang={lang} /> */}
         <Architecture t={t.architecture} lang={lang} />
-        <Compliance t={t.compliance} lang={lang} />
+        {/* <Compliance t={t.compliance} lang={lang} /> */}
         <Benchmarks t={t.benchmarks} lang={lang} />
 
         <section id="use-cases">
@@ -111,13 +111,13 @@ const App: React.FC = () => {
         <ComparisonMatrix t={t.comparisonMatrix} lang={lang} />
         <ROICalculator t={t.roiCalculator} lang={lang} />
         <CustomerStories t={t.customerStories} lang={lang} />
-        <DemoPreview t={t.demoPreview} lang={lang} />
+        {/* <DemoPreview t={t.demoPreview} lang={lang} /> */}
 
         <section id="faq">
           <FAQ t={t.faq} lang={lang} />
         </section>
 
-        <Developer t={t.developer} lang={lang} />
+        {/* <Developer t={t.developer} lang={lang} /> */}
         <ResourceCenter t={t.resourceCenter} lang={lang} />
         
         <section className="py-40 px-6 text-center relative overflow-hidden">

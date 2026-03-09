@@ -16,7 +16,7 @@ const Benchmarks: React.FC<Props> = ({ t, lang }) => {
     <section className="py-40 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ const Benchmarks: React.FC<Props> = ({ t, lang }) => {
             {t.metrics.map((metric: any, i: number) => {
               const Icon = icons[i % icons.length];
               return (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -66,17 +66,18 @@ const Benchmarks: React.FC<Props> = ({ t, lang }) => {
               </div>
               <h3 className="text-xl font-bold text-white">{t.environment.title}</h3>
             </div>
-            <ul className="space-y-6 flex-1">
+            <ul className="space-y-6 ">
               {t.environment.items.map((item: string, i: number) => (
                 <li key={i} className={`flex gap-4 items-center ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
                   <div className="w-2 h-2 rounded-full bg-blue-500" />
                   <span className={`text-slate-300 font-medium ${lang === 'ar' ? 'text-right' : 'text-left'}`}>{item}</span>
                 </li>
+
               ))}
             </ul>
-            <button className="mt-12 w-full py-5 rounded-2xl bg-blue-500 text-white font-bold hover:bg-blue-600 transition-all shadow-2xl shadow-blue-500/20">
-              {t.button}
-            </button>
+            <p className="mt-10 text-sm text-slate-400 leading-relaxed">
+              {t.para}
+            </p>
           </div>
         </div>
       </div>

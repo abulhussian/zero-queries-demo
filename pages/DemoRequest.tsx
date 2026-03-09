@@ -9,6 +9,19 @@ interface Props {
 }
 
 const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: ""
+  });
+
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
   const [submitted, setSubmitted] = useState(false);
   const t = translations[lang].demo;
 
@@ -25,9 +38,9 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
         </div>
         <h2 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">{t.form.success.title}</h2>
         <p className="text-slate-400 mb-10 max-w-sm mx-auto font-light">
-          {t.form.success.description}
+          We will get back to you shortly.
         </p>
-        <button 
+        <button
           onClick={onBack}
           className="btn-premium px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs"
         >
@@ -44,7 +57,7 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
           {t.title.split(' ').map((word: string, i: number) => (
             <React.Fragment key={i}>
               {word === 'Protocol.' || word === 'البروتوكول.' ? <span className="premium-gradient">{word}</span> : word}{' '}
-              {i === 1 && <br/>}
+              {i === 1 && <br />}
             </React.Fragment>
           ))}
         </h2>
@@ -69,10 +82,36 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
 
       <form onSubmit={handleSubmit} className={`space-y-5 ${lang === 'ar' ? 'lg:order-1' : ''}`}>
         <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
-          <input required type="text" className={`w-full glass bg-white/5 px-5 py-4 rounded-2xl text-white text-sm focus:border-blue-500/50 outline-none transition-all placeholder:text-slate-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`} placeholder={t.form.name} />
-          <input required type="email" className={`w-full glass bg-white/5 px-5 py-4 rounded-2xl text-white text-sm focus:border-blue-500/50 outline-none transition-all placeholder:text-slate-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`} placeholder={t.form.email} />
+          <input
+            required
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className={`w-full glass bg-white/5 px-5 py-4 rounded-2xl text-white text-sm focus:border-blue-500/50 outline-none transition-all placeholder:text-slate-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`}
+            placeholder="Your Name"
+          />
+          <input
+            required
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className={`w-full glass bg-white/5 px-5 py-4 rounded-2xl text-white text-sm focus:border-blue-500/50 outline-none transition-all placeholder:text-slate-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`}
+            placeholder="Your Email"
+          />
+         
         </div>
-        <div className="relative">
+         <input
+            required
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className={`w-full glass bg-white/5 px-5 py-4 rounded-2xl text-white text-sm focus:border-blue-500/50 outline-none transition-all placeholder:text-slate-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`}
+            placeholder="Company Name"
+          />
+        {/* <div className="relative">
           <select className={`w-full glass bg-slate-900 px-5 py-4 rounded-2xl text-white text-sm appearance-none outline-none focus:border-blue-500/50 transition-all ${lang === 'ar' ? 'text-right pr-5 pl-12' : 'text-left pl-5 pr-12'}`}>
             <option>PostgreSQL</option>
             <option>MySQL</option>
@@ -82,7 +121,7 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
           <div className={`absolute ${lang === 'ar' ? 'left-5' : 'right-5'} top-1/2 -translate-y-1/2 pointer-events-none text-slate-500`}>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
           </div>
-        </div>
+        </div> */}
         <button className="w-full py-5 bg-white text-black font-black uppercase tracking-[0.2em] text-[10px] rounded-2xl hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-white/5">
           {t.form.submit}
         </button>

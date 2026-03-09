@@ -5,7 +5,7 @@ import { Language } from '../translations';
 import { Globe } from 'lucide-react';
 
 interface Props {
-  onNavigate: (view: View) => void;
+    onNavigate: (view: View) => void;
   lang: Language;
   setLang: (lang: Language) => void;
   t: any;
@@ -15,7 +15,7 @@ const Navbar: React.FC<Props> = ({ onNavigate, lang, setLang, t }) => {
   const links = [
     { name: t.product, href: '#features' },
     { name: t.solutions, href: '#solution' },
-    { name: t.pricing, href: '#roi' },
+    { name: t.pricing, href: '#pricing' },
     { name: t.resources, href: '#faq' },
   ];
 
@@ -26,10 +26,12 @@ const Navbar: React.FC<Props> = ({ onNavigate, lang, setLang, t }) => {
           onClick={() => onNavigate('home')} 
           className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform">
-            <span className="text-white font-black text-xs">ZQ</span>
+          <div className="w-12 h-12  flex items-center justify-center group-hover:scale-110 transition-transform">
+             <img src="/Home/ZQ_APP_icon.png" alt="ZQ Protocol" className="w-16" />
           </div>
-          <span className="text-xl font-bold text-white tracking-tighter uppercase hidden sm:block">ZeroQueries</span>
+          <span className="text-xl font-bold text-white tracking-tighter uppercase hidden sm:block">
+           ZeroQueries
+          </span>
         </div>
         
         <div className="hidden lg:flex items-center gap-8">

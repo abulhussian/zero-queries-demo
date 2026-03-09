@@ -180,7 +180,8 @@ export const translations = {
         items: [
           { title: "Instant Access", desc: "Anyone can ask questions and get answers in seconds, not days." },
           { title: "Dynamic Exploration", desc: "AI-powered insights that allow for infinite follow-up questions." },
-          { title: "Strategic Focus", desc: "Analysts focus on high-value strategy instead of basic SQL tasks." }
+          { title: "Strategic Focus", desc: "Analysts focus on high-value strategy instead of basic SQL tasks." },
+          { title: "Role-Based Access Control", desc: "Grant specific users or teams access only to the tables and data they are authorized to view or manage." }
         ]
       }
     },
@@ -216,7 +217,7 @@ export const translations = {
           price: "$499",
           period: "/mo",
           description: "Perfect for small teams starting with AI data intelligence.",
-          features: ["Up to 5 users", "2 Databases", "Standard Support", "Cloud Deployment"],
+          features: ["Up to 5 users", "Table Permissions", "Standard Support", "Cloud Deployment"],
           highlight: false,
           button: "Start with Starter"
         },
@@ -225,7 +226,7 @@ export const translations = {
           price: "$1,499",
           period: "/mo",
           description: "Ideal for growing companies with multiple departments.",
-          features: ["Up to 20 users", "5 Databases", "Priority Support", "Advanced Analytics", "Custom Roles"],
+          features: ["Up to 20 users", "Table Permissions", "Priority Support"],
           highlight: true,
           button: "Scale with Growth"
         },
@@ -234,7 +235,7 @@ export const translations = {
           price: "Custom",
           period: "",
           description: "Full-scale intelligence for large organizations.",
-          features: ["Unlimited users", "Unlimited Databases", "24/7 Dedicated Support", "On-Premise Option", "SLA Guarantee"],
+          features: ["Unlimited users", "Table Permissions", "24/7 Dedicated Support", "On-Premise Option", "SLA Guarantee"],
           highlight: false,
           button: "Contact Sales"
         }
@@ -250,7 +251,15 @@ export const translations = {
       sections: {
         platform: {
           title: "Product",
-          links: ["Platform", "Protocol", "Pricing", "Integrations", "Security", "Changelog", "Roadmap"]
+          links: [
+            { label: "Platform", href: "#features" },
+            { label: "Protocol", href: "#process" },
+            { label: "Pricing", href: "#pricing" },
+            { label: "Integrations", href: "#features" },
+            { label: "Security", href: "#security" },
+            { label: "Changelog", href: "#features" },
+            { label: "Roadmap", href: "#features" }
+          ]
         },
         solutions: {
           title: "Solutions",
@@ -430,7 +439,7 @@ export const translations = {
     benchmarks: {
       headline: "Engineered for speed at any scale",
       subheadline: "ZeroQueries is built to handle enterprise data volumes with sub-second response times.",
-      button: "Download full benchmark report",
+      para: "These benchmarks were conducted using real-world workloads on standard cloud infrastructure ensuring the results reflect production-ready performance without any special tuning",
       metrics: [
         { title: "Query Response Time", items: ["p50: 0.8 seconds", "p95: 2.1 seconds", "p99: 3.4 seconds"] },
         { title: "Concurrent Users", items: ["Tested up to 10,000 simultaneous queries with no degradation"] },
@@ -682,7 +691,8 @@ export const translations = {
         items: [
           { title: "اختناقات المحللين", desc: "تنتظر الفرق أيامًا لكتابة استعلامات SQL وتنفيذها." },
           { title: "لوحات بيانات ثابتة", desc: "تقارير جامدة لا تسمح بأسئلة متابعة أو تعمق في البيانات." },
-          { title: "تكاليف تشغيلية عالية", desc: "فرق بيانات باهظة الثمن تقضي 80% من وقتها في التقارير المتكررة." }
+          { title: "تكاليف تشغيلية عالية", desc: "فرق بيانات باهظة الثمن تقضي 80% من وقتها في التقارير المتكررة." },
+          { title: "التحكم في الوصول حسب الأدوار", desc: "منح المستخدمين أو الفرق صلاحية الوصول فقط إلى الجداول والبيانات المصرح لهم بعرضها أو إدارتها." }
         ]
       },
       zeroQueries: {
@@ -737,7 +747,7 @@ export const translations = {
           price: "$1,499",
           period: "/شهرياً",
           description: "مثالية للشركات المتنامية ذات الأقسام المتعددة.",
-          features: ["حتى 20 مستخدم", "5 قواعد بيانات", "دعم ذو أولوية", "تحليلات متقدمة", "أدوار مخصصة"],
+          features: ["حتى 20 مستخدم", "5 قواعد بيانات", "دعم ذو أولوية", "تحليلات متقدمة"],
           highlight: true,
           button: "توسع مع النمو"
         },
@@ -746,7 +756,7 @@ export const translations = {
           price: "مخصص",
           period: "",
           description: "ذكاء كامل للمؤسسات الكبيرة.",
-          features: ["مستخدمون غير محدودين", "قواعد بيانات غير محدودة", "دعم مخصص 24/7", "خيار النشر داخل المؤسسة", "ضمان مستوى الخدمة"],
+          features: ["مستخدمون غير محدودين", "صلاحيات الجداول", "دعم مخصص 24/7", "خيار النشر داخل المؤسسة", "ضمان مستوى الخدمة"],
           highlight: false,
           button: "اتصل بالمبيعات"
         }
@@ -942,7 +952,7 @@ export const translations = {
     benchmarks: {
       headline: "مصمم للسرعة على أي نطاق",
       subheadline: "صُممت ZeroQueries للتعامل مع أحجام بيانات المؤسسات مع أوقات استجابة أقل من الثانية.",
-      button: "حمّل تقرير المعايير الكامل",
+      para: "تم إجراء هذه الاختبارات باستخدام أحمال عمل واقعية على بنية تحتية سحابية قياسية، مما يضمن أن النتائج تعكس أداءً جاهزًا للإنتاج دون أي ضبط أو تحسين خاص.",
       metrics: [
         { title: "وقت استجابة الاستعلام", items: ["p٥٠: ٠.٨ ثانية", "p٩٥: ٢.١ ثانية", "p٩٩: ٣.٤ ثانية"] },
         { title: "المستخدمون المتزامنون", items: ["تم الاختبار حتى ١٠٬٠٠٠ استعلام متزامن دون تدهور"] },
