@@ -7,16 +7,17 @@ import { Building2, HeartPulse, ShoppingBag, Laptop, Landmark, Truck } from 'luc
 interface Props {
   t: any;
   lang: Language;
+  onDemoClick: () => void;
 }
 
-const IndustrySolutions: React.FC<Props> = ({ t, lang }) => {
+const IndustrySolutions: React.FC<Props> = ({ t, lang, onDemoClick }) => {
   const icons = [Landmark, HeartPulse, ShoppingBag, Laptop, Building2, Truck];
 
   return (
     <section className="py-40 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +34,7 @@ const IndustrySolutions: React.FC<Props> = ({ t, lang }) => {
           {t.industries.map((industry: any, i: number) => {
             const Icon = icons[i % icons.length];
             return (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -56,7 +57,10 @@ const IndustrySolutions: React.FC<Props> = ({ t, lang }) => {
         </div>
 
         <div className="text-center">
-          <button className="btn-premium px-12 py-5 rounded-full font-bold text-lg">
+          <button
+            onClick={onDemoClick}
+            className="btn-premium px-12 py-5 rounded-full font-bold text-lg"
+          >
             {t.button}
           </button>
         </div>

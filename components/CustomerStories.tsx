@@ -66,14 +66,26 @@ const CustomerStories: React.FC<Props> = ({ t, lang }) => {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
-          <button className="text-blue-400 font-bold hover:text-blue-300 transition-colors flex items-center gap-2 mx-auto">
-            {t.footer}
-            <svg className={`w-4 h-4 ${lang === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-        </div>
+       {t.stories.length > 3 && (
+  <div className="mt-20 text-center">
+    <button className="text-blue-400 font-bold hover:text-blue-300 transition-colors flex items-center gap-2 mx-auto">
+      {t.footer}
+      <svg
+        className={`w-4 h-4 ${lang === 'ar' ? 'rotate-180' : ''}`}
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
+        />
+      </svg>
+    </button>
+  </div>
+)}
       </div>
     </section>
   );

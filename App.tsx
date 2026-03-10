@@ -53,24 +53,24 @@ const App: React.FC = () => {
 
   return (
     <div className={`relative min-h-screen bg-[#030014] text-slate-200 font-sans ${lang === 'ar' ? 'font-arabic' : ''}`}>
-      <Navbar 
-        onNavigate={(v) => setOverlay(v)} 
-        lang={lang} 
-        setLang={setLang} 
-        t={t.nav} 
+      <Navbar
+        onNavigate={(v) => setOverlay(v)}
+        lang={lang}
+        setLang={setLang}
+        t={t.nav}
       />
-      
+
       <main className="relative">
         <Hero onCta={() => setOverlay('demo')} t={t.hero} lang={lang} />
-        
+
         <TrustBar t={t.trustBar} lang={lang} />
 
         <section id="problem">
           <Problem t={t.problem} lang={lang} />
         </section>
-        
+
         <section id="problem-deep-dive">
-        <ProblemDeepDive t={t.problemDeepDive} lang={lang} />
+          <ProblemDeepDive t={t.problemDeepDive} lang={lang} />
         </section>
 
         <section id="solution">
@@ -86,7 +86,7 @@ const App: React.FC = () => {
         </section>
 
         {/* <Integrations t={t.integrations} lang={lang} /> */}
-        
+
         <section id="security">
           <Security t={t.security} lang={lang} />
         </section>
@@ -96,7 +96,7 @@ const App: React.FC = () => {
         <section id="architecture">
           <Architecture t={t.architecture} lang={lang} />
         </section>
-        
+
         {/* <Compliance t={t.compliance} lang={lang} /> */}
         <section id="benchmarks">
           <Benchmarks t={t.benchmarks} lang={lang} />
@@ -107,28 +107,34 @@ const App: React.FC = () => {
         </section>
 
         <section id="industry-solutions">
-        <IndustrySolutions t={t.industrySolutions} lang={lang} />
+          <IndustrySolutions
+            t={t.industrySolutions}
+            lang={lang}
+            onDemoClick={() => setOverlay('demo')}
+          />
         </section>
 
-        <section id="pricing">
-          <Pricing t={t.pricing} lang={lang} onSelect={() => setOverlay('demo')} />
-        </section>
+        <Pricing
+          t={t.pricing}
+          lang={lang}
+          onSelect={() => window.location.href = "https://chat.zeroqueries.com"}
+        />
 
         <section id="comparison">
           <Comparison t={t.roi} lang={lang} />
         </section>
 
         <section id="comparison-matrix">
-        <ComparisonMatrix t={t.comparisonMatrix} lang={lang} />
+          <ComparisonMatrix t={t.comparisonMatrix} lang={lang} />
         </section>
 
         <section id="roi-calculator">
-        <ROICalculator t={t.roiCalculator} lang={lang} />
+          <ROICalculator t={t.roiCalculator} lang={lang} />
         </section>
 
 
         <section id="customer-stories">
-        <CustomerStories t={t.customerStories} lang={lang} />
+          <CustomerStories t={t.customerStories} lang={lang} />
         </section>
 
 
@@ -140,10 +146,10 @@ const App: React.FC = () => {
 
         {/* <Developer t={t.developer} lang={lang} /> */}
 
-        <section id="resource-center">
-        <ResourceCenter t={t.resourceCenter} lang={lang} />
-        </section>
-        
+        {/* <section id="resource-center">
+          <ResourceCenter t={t.resourceCenter} lang={lang} />
+        </section> */}
+
         <section className="py-40 px-6 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
           <div className="max-w-4xl mx-auto relative z-10">
@@ -154,7 +160,7 @@ const App: React.FC = () => {
               {t.finalCta.subheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button 
+              <button
                 onClick={() => setOverlay('demo')}
                 className="btn-premium px-12 py-5 rounded-full font-bold text-lg w-full sm:w-auto"
               >
@@ -170,14 +176,14 @@ const App: React.FC = () => {
       {/* Premium Responsive Overlay System */}
       {overlay !== 'home' && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
-          <div 
+          <div
             className="absolute inset-0 bg-black/80 backdrop-blur-xl animate-fade-in"
             onClick={() => setOverlay('home')}
           />
           <div className="relative w-full max-w-4xl glass rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden max-h-[95vh] flex flex-col animate-reveal">
-            <button 
+            <button
               onClick={() => setOverlay('home')}
-              className={`absolute top-6 ${lang === 'ar' ? 'left-6' : 'right-6'} z-[210] p-2 text-slate-400 hover:text-white transition-colors`}
+              className={`absolute top-2 ${lang === 'ar' ? 'left-6' : 'right-6'} z-[210] p-2 text-slate-400 hover:text-white transition-colors`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

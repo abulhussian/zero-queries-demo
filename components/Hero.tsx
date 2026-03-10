@@ -12,6 +12,7 @@ interface Props {
 
 const Hero: React.FC<Props> = ({ onCta, t, lang }) => {
   const [displayText, setDisplayText] = useState('');
+  const [showVideo, setShowVideo] = useState(false);
   const fullText = t.tagline;
   
   useEffect(() => {
@@ -75,7 +76,7 @@ const Hero: React.FC<Props> = ({ onCta, t, lang }) => {
               {t.ctaDemo}
             </button>
             <button 
-              onClick={onCta}
+              onClick={() => setShowVideo(true)}
               className="group flex items-center gap-3 text-white font-bold hover:text-blue-400 transition-colors"
             >
               {t.ctaHow}
@@ -143,6 +144,35 @@ const Hero: React.FC<Props> = ({ onCta, t, lang }) => {
           </div>
         </motion.div>
       </div>
+ {showVideo && (
+  <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-xl px-6">
+    
+    <div className="relative w-full max-w-5xl">
+      
+      {/* Close Button */}
+      <button
+        onClick={() => setShowVideo(false)}
+        className="absolute -top-7 right-0 text-slate-300 hover:text-white transition text-2xl"
+      >
+        ✕
+      </button>
+
+      {/* Video Container */}
+      <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+        
+        <video
+          src="/Home/home-video.mp4"
+          controls
+          autoPlay
+          className="w-full h-full object-cover"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+)}
     </section>
   );
 };

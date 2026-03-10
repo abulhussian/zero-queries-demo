@@ -101,8 +101,9 @@ const ROICalculator: React.FC<Props> = ({ t, lang }) => {
                 </label>
                 <input
                   type="number"
+                  min="0"
                   value={employees}
-                  onChange={(e) => setEmployees(Number(e.target.value))}
+                  onChange={(e) => setEmployees(Math.max(0, Number(e.target.value)))}
                   className="w-full mt-1 px-4 py-3 bg-slate-800 rounded-xl text-white"
                 />
               </div>
@@ -113,8 +114,9 @@ const ROICalculator: React.FC<Props> = ({ t, lang }) => {
                 </label>
                 <input
                   type="number"
+                  min="0"
                   value={avgSalary}
-                  onChange={(e) => setAvgSalary(Number(e.target.value))}
+                  onChange={(e) => setAvgSalary(Math.max(0, Number(e.target.value)))}
                   className="w-full mt-1 px-4 py-3 bg-slate-800 rounded-xl text-white"
                 />
               </div>
@@ -125,8 +127,9 @@ const ROICalculator: React.FC<Props> = ({ t, lang }) => {
                 </label>
                 <input
                   type="number"
+                  min="0"
                   value={hoursSaved}
-                  onChange={(e) => setHoursSaved(Number(e.target.value))}
+                  onChange={(e) => setHoursSaved(Math.max(0, Number(e.target.value)))}
                   className="w-full mt-1 px-4 py-3 bg-slate-800 rounded-xl text-white"
                 />
               </div>

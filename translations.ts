@@ -5,8 +5,8 @@ export type Language = 'en' | 'ar';
 export const translations = {
   en: {
     nav: {
-      product: "Product",
-      solutions: "Solutions",
+      product: "Features",
+      solutions: "Solution",
       pricing: "Pricing",
       resources: "Resources",
       demo: "Request a Demo",
@@ -533,7 +533,7 @@ export const translations = {
   },
   ar: {
     nav: {
-      product: "المنتج",
+      product: "الميزات",
       solutions: "الحلول",
       pricing: "الأسعار",
       resources: "المصادر",
