@@ -23,7 +23,7 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
     });
   };
   const [submitted, setSubmitted] = useState(false);
-  const t = translations[lang].demo;
+  const t = translations[lang].demoRequest;
 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -82,24 +82,23 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
     {/* LEFT SIDE */}
     <div className={lang === "ar" ? "lg:order-2" : ""}>
       <h2 className="text-4xl font-black text-white uppercase tracking-tight mb-6 leading-tight">
-        REQUEST A <br /> PERSONALIZED DEMO
+        {t.title}
       </h2>
 
       <p className="text-slate-400 mb-8">
-        Learn how ZeroQueries enables secure, AI-powered access to your
-        enterprise data. During the demo we will show you:
+        {t.description}
       </p>
 
       <div className="space-y-4">
 
-        <div className="flex gap-4 items-start">
-          <CheckCircle2 className="text-blue-400 w-5 h-5 mt-1" />
-          <span className="text-slate-300">
-            Natural language database queries
-          </span>
-        </div>
+        {t.features.map((feature, i) => (
+  <div key={i} className="flex gap-4 items-start">
+    <CheckCircle2 className="text-blue-400 w-5 h-5 mt-1" />
+    <span className="text-slate-300">{feature}</span>
+  </div>
+))}
 
-        <div className="flex gap-4 items-start">
+        {/* <div className="flex gap-4 items-start">
           <CheckCircle2 className="text-blue-400 w-5 h-5 mt-1" />
           <span className="text-slate-300">
             Secure role-based access control
@@ -118,7 +117,7 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
           <span className="text-slate-300">
             Enterprise deployment options (Cloud or On-Premise)
           </span>
-        </div>
+        </div> */}
 
       </div>
     </div>
@@ -132,7 +131,7 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
         name="name"
         value={formData.name}
         onChange={handleChange}
-        placeholder="Name"
+        placeholder={t.form.name}
         className="w-full bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-white placeholder:text-slate-500 outline-none"
       />
 
@@ -142,37 +141,37 @@ const DemoRequest: React.FC<Props> = ({ onBack, lang }) => {
         name="email"
         value={formData.email}
         onChange={handleChange}
-        placeholder="Work Email"
+        placeholder={t.form.email}
         className="w-full bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-white placeholder:text-slate-500 outline-none"
       />
 
       <input
         type="text"
         name="organization"
-        placeholder="Organization"
+        placeholder={t.form.organization}
         className="w-full bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-white placeholder:text-slate-500 outline-none"
       />
 
       <input
         type="text"
         name="role"
-        placeholder="Role"
+        placeholder={t.form.role}
         className="w-full bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-white placeholder:text-slate-500 outline-none"
       />
 
       <input
         type="text"
         name="environment"
-        placeholder="Data Environment (Optional)"
+        placeholder={t.form.environment}
         className="w-full bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-white placeholder:text-slate-500 outline-none"
       />
 
       <button className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase tracking-widest text-sm rounded-xl transition-all">
-        BOOK ENTERPRISE DEMO
+        {t.form.submit}
       </button>
 
       <p className="text-xs text-slate-500 text-center">
-        A solutions specialist will contact you within 24 hours.
+        {t.form.note}
       </p>
 
     </form>

@@ -20,23 +20,27 @@ const Navbar: React.FC<Props> = ({ onNavigate, lang, setLang, t }) => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-[100] px-4 sm:px-6 py-6">
-      <div className="max-w-7xl mx-auto glass rounded-[2rem] px-4 sm:px-8 py-3 flex justify-between items-center transition-all duration-500 hover:border-white/20">
+    // <nav className="fixed top-0 w-full z-[100] px-4 sm:px-6 py-3">
+    //   <div className="max-w-7xl mx-auto glass rounded-[2rem] px-4 sm:px-8 py-3 flex justify-between items-center transition-all duration-500 hover:border-white/20">
+    <nav className="fixed top-0 w-full z-[100] px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto glass rounded-[2rem] px-4 sm:px-8 py-2 h-16 mt-2 flex justify-between items-center transition-all duration-500 hover:border-white/20">
         <div
           onClick={() => onNavigate('home')}
-          className="flex items-center gap-3 group cursor-pointer"
+          className="flex items-center gap-2 group cursor-pointer"
         >
           <img
             src="/Home/ZQ_APP_icon.png"
             alt="ZQ Protocol"
-            className="w-20 group-hover:scale-110 transition-transform duration-300"
+            className="w-24 h-auto group-hover:scale-110 transition-transform duration-300"
           />
 
-          <span className="text-[22px] font-extrabold tracking-wide hidden sm:block 
-  bg-gradient-to-r from-white via-slate-200 to-slate-400 
-  bg-clip-text text-transparent 
-  group-hover:from-white group-hover:to-white 
-  transition-all duration-300">
+          <span
+            className="text-[22px] font-extrabold tracking-wide hidden sm:block 
+    bg-gradient-to-r from-white via-slate-200 to-slate-400 
+    bg-clip-text text-transparent 
+    group-hover:from-white group-hover:to-white 
+    transition-all duration-300"
+          >
             ZeroQueries
           </span>
         </div>

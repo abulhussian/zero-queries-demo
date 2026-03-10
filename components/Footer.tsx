@@ -113,7 +113,33 @@ const Footer = ({ t, lang, onNavigate }) => {
   return (
     <footer className="bg-[#020617] text-slate-400 border-t border-white/5">
 
+ {/* Newsletter Section */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-white/10 rounded-3xl p-12 flex flex-col lg:flex-row items-center justify-between gap-10">
 
+          <div className="max-w-xl">
+            <h2 className="text-3xl font-bold text-white mb-2">
+              {t.newsletter.title}
+            </h2>
+            <p className="text-slate-400">
+              {t.newsletter.para}
+            </p>
+          </div>
+
+          <div className="flex w-full lg:w-auto gap-4">
+            <input
+              type="email"
+              placeholder={t.newsletter.placeholder}
+              className="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white w-full lg:w-80 focus:outline-none focus:border-blue-500"
+            />
+
+            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition">
+              {t.newsletter.button}
+            </button>
+          </div>
+
+        </div>
+      </div>
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 pb-20 grid lg:grid-cols-4 gap-14">
 
@@ -182,33 +208,7 @@ const Footer = ({ t, lang, onNavigate }) => {
         ))}
 
       </div>
-      {/* Newsletter Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-white/10 rounded-3xl p-12 flex flex-col lg:flex-row items-center justify-between gap-10">
-
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {t.newsletter.title}
-            </h2>
-            <p className="text-slate-400">
-              Join 5,000+ data leaders receiving our weekly insights.
-            </p>
-          </div>
-
-          <div className="flex w-full lg:w-auto gap-4">
-            <input
-              type="email"
-              placeholder={t.newsletter.placeholder}
-              className="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-white w-full lg:w-80 focus:outline-none focus:border-blue-500"
-            />
-
-            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition">
-              {t.newsletter.button}
-            </button>
-          </div>
-
-        </div>
-      </div>
+     
 
       {/* Bottom Bar */}
       <div className="border-t border-white/5">

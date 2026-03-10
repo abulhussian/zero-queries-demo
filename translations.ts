@@ -242,11 +242,36 @@ export const translations = {
         }
       ]
     },
+    demoRequest: {
+      title: "Request a Personalized Demo",
+      description: "Discover how ZeroQueries enables secure, AI-powered access to your enterprise data.",
+      features: [
+        "Natural language database queries",
+        "Secure role-based access control",
+        "Instant chart generation",
+        "Enterprise deployment options"
+      ],
+      form: {
+        name: "Full Name",
+        email: "Work Email",
+        organization: "Organization",
+        role: "Role",
+        environment: "Data Environment (Optional)",
+        submit: "Book Enterprise Demo",
+        note: "A solutions specialist will contact you within 24 hours.",
+        success: {
+          title: "Demo Request Sent",
+          description: "Thank you! Our team will contact you shortly to schedule your personalized demo.",
+          button: "Back to Home"
+        }
+      }
+    },
     footer: {
       description: "Conversational Data Intelligence for the modern enterprise. Safe, private, and exceptionally fast.",
       newsletter: {
         title: "Get data insights delivered to your inbox",
         placeholder: "Work Email",
+        para: "Join 5,000+ data leaders receiving our weekly insights.",
         button: "Subscribe"
       },
       sections: {
@@ -275,11 +300,11 @@ export const translations = {
         },
         resources: {
           title: "Resources",
-          links: [ 
+          links: [
             // {label: "Blog", href: "#resource-center"}, 
             // {label: "Whitepapers", href: "#resource-center"},
             //  {label: "Webinars", href: "#resource-center"},
-              {label: "ROI Calculator", href: "#roi-calculator"}, {label: "Benchmarks", href: "#benchmarks"} ]
+            { label: "ROI Calculator", href: "#roi-calculator" }, { label: "Benchmarks", href: "#benchmarks" }]
         },
         // company: {
         //   title: "Company",
@@ -774,42 +799,67 @@ export const translations = {
         }
       ]
     },
+    demoRequest: {
+      title: "اطلب عرضًا توضيحيًا مخصصًا",
+      description: "اكتشف كيف يتيح ZeroQueries وصولًا آمنًا إلى بيانات مؤسستك باستخدام الذكاء الاصطناعي.",
+      features: [
+        "الاستعلام عن قواعد البيانات باستخدام اللغة الطبيعية",
+        "التحكم الآمن في الوصول بناءً على الأدوار",
+        "إنشاء المخططات بشكل فوري",
+        "خيارات نشر للمؤسسات"
+      ],
+      form: {
+        name: "الاسم الكامل",
+        email: "البريد الإلكتروني للعمل",
+        organization: "المؤسسة",
+        role: "المسمى الوظيفي",
+        environment: "بيئة البيانات (اختياري)",
+        submit: "احجز عرضًا توضيحيًا للمؤسسات",
+        note: "سيقوم أحد مختصي الحلول بالتواصل معك خلال 24 ساعة.",
+        success: {
+          title: "تم إرسال طلب العرض",
+          description: "شكرًا لك! سيتواصل فريقنا معك قريبًا لتحديد موعد العرض التوضيحي.",
+          button: "العودة إلى الصفحة الرئيسية"
+        }
+      }
+    },
     footer: {
       description: "ذكاء البيانات المحادثي للمؤسسات الحديثة. آمنة، خاصة، وسريعة بشكل استثنائي.",
       newsletter: {
         title: "احصل على رؤى البيانات في بريدك الوارد",
         placeholder: "البريد الإلكتروني للعمل",
+        para: "انضم إلى أكثر من 5,000 من قادة البيانات الذين يتلقون رؤانا الأسبوعية",
         button: "اشتراك"
       },
       sections: {
         platform: {
           title: "المنتج",
-          links: [ {label: "المنصة", href: "#features"}, 
-            {label: "البروتوكول", href: "#process"},
-             {label: "التسعير", href: "#pricing"},
-              {label: "التكاملات", href: "#integrations"},
-               {label: "الأمان", href: "#security"},
-                {label: "سجل التغييرات", href: "#changelog"}, 
-                {label: "خريطة الطريق", href: "#roadmap"} ]
+          links: [{ label: "المنصة", href: "#features" },
+          { label: "البروتوكول", href: "#process" },
+          { label: "التسعير", href: "#pricing" },
+          { label: "التكاملات", href: "#integrations" },
+          { label: "الأمان", href: "#security" },
+          { label: "سجل التغييرات", href: "#changelog" },
+          { label: "خريطة الطريق", href: "#roadmap" }]
         },
         solutions: {
           title: "الحلول",
-          links: [ {label : "للتمويل", href: "#use-cases"},
-             {label: "للمبيعات", href: "#use-cases"},
-              {label: "للعمليات", href: "#use-cases"},
-               {label: "للتنفيذيين", href: "#solutions"},
-                {label: "حسب القطاع", href: "#industry-solutions"},
-                 {label: "دراسات الحالة", href: "#customer-stories"} 
-                ]
+          links: [{ label: "للتمويل", href: "#use-cases" },
+          { label: "للمبيعات", href: "#use-cases" },
+          { label: "للعمليات", href: "#use-cases" },
+          { label: "للتنفيذيين", href: "#solutions" },
+          { label: "حسب القطاع", href: "#industry-solutions" },
+          { label: "دراسات الحالة", href: "#customer-stories" }
+          ]
         },
         resources: {
           title: "الموارد",
-          links: [ 
-              // {label: "المدونة", href: "#resource-center"},
-              //  {label: "الأوراق البحثية", href: "#resource-center"},
-              //   {label: "الندوات عبر الإنترنت", href: "#resource-center"},
-                 {label: "حاسبة العائد", href: "#roi-calculator"},
-                  {label: "المعايير", href: "#benchmarks"} ]
+          links: [
+            // {label: "المدونة", href: "#resource-center"},
+            //  {label: "الأوراق البحثية", href: "#resource-center"},
+            //   {label: "الندوات عبر الإنترنت", href: "#resource-center"},
+            { label: "حاسبة العائد", href: "#roi-calculator" },
+            { label: "المعايير", href: "#benchmarks" }]
         },
         // company: {
         //   title: "الشركة",
