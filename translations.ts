@@ -275,7 +275,11 @@ export const translations = {
         },
         resources: {
           title: "Resources",
-          links: [ {label: "Blog", href: "#resource-center"}, {label: "Whitepapers", href: "#resource-center"}, {label: "Webinars", href: "#resource-center"}, {label: "ROI Calculator", href: "#roi-calculator"}, {label: "Benchmarks", href: "#benchmarks"} ]
+          links: [ 
+            // {label: "Blog", href: "#resource-center"}, 
+            // {label: "Whitepapers", href: "#resource-center"},
+            //  {label: "Webinars", href: "#resource-center"},
+              {label: "ROI Calculator", href: "#roi-calculator"}, {label: "Benchmarks", href: "#benchmarks"} ]
         },
         // company: {
         //   title: "Company",
@@ -801,9 +805,9 @@ export const translations = {
         resources: {
           title: "الموارد",
           links: [ 
-              {label: "المدونة", href: "#resource-center"},
-               {label: "الأوراق البحثية", href: "#resource-center"},
-                {label: "الندوات عبر الإنترنت", href: "#resource-center"},
+              // {label: "المدونة", href: "#resource-center"},
+              //  {label: "الأوراق البحثية", href: "#resource-center"},
+              //   {label: "الندوات عبر الإنترنت", href: "#resource-center"},
                  {label: "حاسبة العائد", href: "#roi-calculator"},
                   {label: "المعايير", href: "#benchmarks"} ]
         },

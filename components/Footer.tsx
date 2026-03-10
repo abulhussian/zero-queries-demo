@@ -112,23 +112,31 @@ import { Twitter, Linkedin, Github } from "lucide-react";
 const Footer = ({ t, lang, onNavigate }) => {
   return (
     <footer className="bg-[#020617] text-slate-400 border-t border-white/5">
-      
+
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 pb-20 grid lg:grid-cols-4 gap-14">
 
         {/* Logo + Description */}
         <div>
-          <div
-            onClick={() => onNavigate("home")}
-            className="flex items-center gap-3 cursor-pointer mb-6"
-          >
-            <img src="/Home/ZQ_APP_icon.png" className="w-10" />
+            <div
+          onClick={() => onNavigate('home')}
+          className="flex items-center gap-3 group cursor-pointer"
+        >
+          <img
+            src="/Home/ZQ_APP_icon.png"
+            alt="ZQ Protocol"
+            className="w-20 group-hover:scale-110 transition-transform duration-300"
+          />
 
-            <span className="text-xl font-bold text-white">
-              ZeroQueries
-            </span>
-          </div>
+          <span className="text-[22px] font-extrabold tracking-wide hidden sm:block 
+  bg-gradient-to-r from-white via-slate-200 to-slate-400 
+  bg-clip-text text-transparent 
+  group-hover:from-white group-hover:to-white 
+  transition-all duration-300">
+            ZeroQueries
+          </span>
+        </div>
 
           <p className="text-sm leading-relaxed mb-6">
             {t.description}
@@ -152,29 +160,21 @@ const Footer = ({ t, lang, onNavigate }) => {
         </div>
 
         {/* Footer Links */}
-        {Object.entries(t.sections).map(([key, section]) => (
+        {Object.entries(t.sections).map(([key, section]: [string, any]) => (
           <div key={key}>
             <h4 className="text-white font-semibold mb-6">
               {section.title}
             </h4>
 
             <ul className="space-y-3 text-sm">
-              {section.links.map((link, i) => (
+              {section.links.map((link: any, i: number) => (
                 <li key={i}>
-
-                  {typeof link === "string" ? (
-                    <span className="hover:text-white transition cursor-pointer">
-                      {link}
-                    </span>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="hover:text-white transition"
-                    >
-                      {link.label}
-                    </a>
-                  )}
-
+                  <a
+                    href={link.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
