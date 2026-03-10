@@ -1,3 +1,4 @@
+import { label } from "motion/react-client";
 
 export type Language = 'en' | 'ar';
 
@@ -263,20 +264,27 @@ export const translations = {
         },
         solutions: {
           title: "Solutions",
-          links: ["For Finance", "For Sales", "For Operations", "For Executives", "By Industry", "Case Studies"]
+          links: [
+            { label: "For Finance", href: "#use-cases" },
+            { label: "For Sales", href: "#use-cases" },
+            { label: "For Operations", href: "#use-cases" },
+            { label: "For Executives", href: "#solutions" },
+            { label: "By Industry", href: "#industry-solutions" },
+            { label: "Case Studies", href: "#customer-stories" }
+          ]
         },
         resources: {
           title: "Resources",
-          links: ["Documentation", "API Reference", "Blog", "Whitepapers", "Webinars", "ROI Calculator", "Benchmarks"]
+          links: [ {label: "Blog", href: "#resource-center"}, {label: "Whitepapers", href: "#resource-center"}, {label: "Webinars", href: "#resource-center"}, {label: "ROI Calculator", href: "#roi-calculator"}, {label: "Benchmarks", href: "#benchmarks"} ]
         },
-        company: {
-          title: "Company",
-          links: ["About Us", "Manifesto", "Careers", "Press", "Contact", "Partners"]
-        },
-        legal: {
-          title: "Legal",
-          links: ["Privacy Policy", "Terms of Service", "Security", "Compliance", "Data Processing", "DPA"]
-        }
+        // company: {
+        //   title: "Company",
+        //   links: ["About Us", "Manifesto", "Careers", "Press", "Contact", "Partners"]
+        // },
+        // legal: {
+        //   title: "Legal",
+        //   links: ["Privacy Policy", "Terms of Service", "Security", "Compliance", "Data Processing", "DPA"]
+        // }
       },
       copyright: "© 2024 ZeroQueries Inc. All rights reserved.",
       status: "Global Data Sovereignty"
@@ -772,24 +780,41 @@ export const translations = {
       sections: {
         platform: {
           title: "المنتج",
-          links: ["المنصة", "البروتوكول", "التسعير", "التكاملات", "الأمان", "سجل التغييرات", "خريطة الطريق"]
+          links: [ {label: "المنصة", href: "#features"}, 
+            {label: "البروتوكول", href: "#process"},
+             {label: "التسعير", href: "#pricing"},
+              {label: "التكاملات", href: "#integrations"},
+               {label: "الأمان", href: "#security"},
+                {label: "سجل التغييرات", href: "#changelog"}, 
+                {label: "خريطة الطريق", href: "#roadmap"} ]
         },
         solutions: {
           title: "الحلول",
-          links: ["للتمويل", "للمبيعات", "للعمليات", "للتنفيذيين", "حسب القطاع", "دراسات الحالة"]
+          links: [ {label : "للتمويل", href: "#use-cases"},
+             {label: "للمبيعات", href: "#use-cases"},
+              {label: "للعمليات", href: "#use-cases"},
+               {label: "للتنفيذيين", href: "#solutions"},
+                {label: "حسب القطاع", href: "#industry-solutions"},
+                 {label: "دراسات الحالة", href: "#customer-stories"} 
+                ]
         },
         resources: {
           title: "الموارد",
-          links: ["الوثائق", "مرجع API", "المدونة", "الأوراق البحثية", "الندوات عبر الإنترنت", "حاسبة العائد", "المعايير"]
+          links: [ 
+              {label: "المدونة", href: "#resource-center"},
+               {label: "الأوراق البحثية", href: "#resource-center"},
+                {label: "الندوات عبر الإنترنت", href: "#resource-center"},
+                 {label: "حاسبة العائد", href: "#roi-calculator"},
+                  {label: "المعايير", href: "#benchmarks"} ]
         },
-        company: {
-          title: "الشركة",
-          links: ["معلومات عنا", "البيان", "الوظائف", "العلاقات العامة", "اتصل بنا", "الشركاء"]
-        },
-        legal: {
-          title: "القانوني",
-          links: ["سياسة الخصوصية", "شروط الخدمة", "الأمان", "الامتثال", "معالجة البيانات", "اتفاقية معالجة البيانات"]
-        }
+        // company: {
+        //   title: "الشركة",
+        //   links: ["معلومات عنا", "البيان", "الوظائف", "العلاقات العامة", "اتصل بنا", "الشركاء"]
+        // },
+        // legal: {
+        //   title: "القانوني",
+        //   links: ["سياسة الخصوصية", "شروط الخدمة", "الأمان", "الامتثال", "معالجة البيانات", "اتفاقية معالجة البيانات"]
+        // }
       },
       copyright: "© ٢٠٢٤ ZeroQueries Inc. جميع الحقوق محفوظة.",
       status: "السيادة العالمية للبيانات"

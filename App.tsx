@@ -68,8 +68,10 @@ const App: React.FC = () => {
         <section id="problem">
           <Problem t={t.problem} lang={lang} />
         </section>
-
+        
+        <section id="problem-deep-dive">
         <ProblemDeepDive t={t.problemDeepDive} lang={lang} />
+        </section>
 
         <section id="solution">
           <Solution t={t.solution} lang={lang} />
@@ -90,27 +92,46 @@ const App: React.FC = () => {
         </section>
 
         {/* <Governance t={t.governance} lang={lang} /> */}
-        <Architecture t={t.architecture} lang={lang} />
+
+        <section id="architecture">
+          <Architecture t={t.architecture} lang={lang} />
+        </section>
+        
         {/* <Compliance t={t.compliance} lang={lang} /> */}
-        <Benchmarks t={t.benchmarks} lang={lang} />
+        <section id="benchmarks">
+          <Benchmarks t={t.benchmarks} lang={lang} />
+        </section>
 
         <section id="use-cases">
           <UseCases t={t.useCases} lang={lang} />
         </section>
 
+        <section id="industry-solutions">
         <IndustrySolutions t={t.industrySolutions} lang={lang} />
+        </section>
 
         <section id="pricing">
           <Pricing t={t.pricing} lang={lang} onSelect={() => setOverlay('demo')} />
         </section>
 
-        <section id="roi">
+        <section id="comparison">
           <Comparison t={t.roi} lang={lang} />
         </section>
 
+        <section id="comparison-matrix">
         <ComparisonMatrix t={t.comparisonMatrix} lang={lang} />
+        </section>
+
+        <section id="roi-calculator">
         <ROICalculator t={t.roiCalculator} lang={lang} />
+        </section>
+
+
+        <section id="customer-stories">
         <CustomerStories t={t.customerStories} lang={lang} />
+        </section>
+
+
         {/* <DemoPreview t={t.demoPreview} lang={lang} /> */}
 
         <section id="faq">
@@ -118,7 +139,10 @@ const App: React.FC = () => {
         </section>
 
         {/* <Developer t={t.developer} lang={lang} /> */}
+
+        <section id="resource-center">
         <ResourceCenter t={t.resourceCenter} lang={lang} />
+        </section>
         
         <section className="py-40 px-6 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />

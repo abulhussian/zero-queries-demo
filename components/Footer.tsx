@@ -43,7 +43,7 @@ const Footer: React.FC<Props> = ({ t, lang, onNavigate }) => {
             </div>
           </div>
 
-          <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+          <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-12 lg:gap-8 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
             {Object.entries(t.sections).map(([key, section]: [string, any]) => (
               <div key={key}>
                 <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mb-8">{section.title}</h4>
