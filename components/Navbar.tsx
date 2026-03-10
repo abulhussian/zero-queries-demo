@@ -29,7 +29,7 @@ const Navbar: React.FC<Props> = ({ onNavigate, lang, setLang, t }) => {
           <img
             src="/Home/ZQ_APP_icon.png"
             alt="ZQ Protocol"
-            className="w-12 group-hover:scale-110 transition-transform duration-300"
+            className="w-20 group-hover:scale-110 transition-transform duration-300"
           />
 
           <span className="text-[22px] font-extrabold tracking-wide hidden sm:block 
